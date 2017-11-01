@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CV - Giorgi Koroshinadze</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="styles/lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="styles/app/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="active"><a href="#section1">About</a></li>
+                        <li><a href="#section2">Skills</a></li>
+                        <li><a href="#section3">Experience</a></li>
+                        <li><a href="#section4">Education</a></li>
+                        <li><a href="#section5">Screens</a></li>
+                        <li><a href="#section6">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-content">
+        <div class="container">
+            <h1 class="heading">Giorgi Koroshinadze</h1>
+            <h3 class="secondary">Front-End Developer</h3>
+            <hr/>
+            <div id="section1" class="section">
+
+                <div class="col-xs-12 text-center section-header">
+                    <h1>About</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 text-right">
+                        <img class="img-circle" width="200" height="200" src="images/photo.jpg" alt="My_Dumb_Face" />
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <h3>Giorgi Koroshinadze</h3>
+                        <h1 style="display: inline" class="pin"><a href="#map"><span class="glyphicon glyphicon-map-marker"></span></a></h1>
+                        <h4 style="display: inline"> Tamarashvili Str. Apt #23</h4>
+                        <h4 style="margin-left: 39px;">Tbilisi, Georgia</h4>
+                        <h4><strong>Date of birth: </strong> October 25th, 1992</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="section2" class="section">
+                <div class="col-xs-12 text-center section-header">
+                    <h1>Skills</h1>
+                </div>
+                <div class="row" ng-repeat="s in skills" style="margin: 0">
+                    <div class="col-xs-5 text-right">
+                        <h3><span ng-bind="s.title"></span>
+                            <h3/>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{s.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{s.progress}}%">
+                                <span ng-bind="s.qTitle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section3" class="section">
+                <div class="col-xs-12 text-center section-header">
+                    <h1>Experience</h1>
+                </div>
+                <div class="row" ng-repeat="e in experience">
+                    <div class="col-xs-12 col-sm-5 text-right">
+                        <h2><span ng-bind="e.company"></span></h2>
+                        <h5><span ng-bind="e.time"></span></h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <h3><strong><span ng-bind="e.position"></span></strong></h3>
+                        <h4><span ng-bind="e.job"></span></h4>
+                        <h5>Projects:</h5>
+                        <a ng-repeat="p in e.projects" href="{{p.link}}">
+                            <h5><span style="font-size: 16px; font-weight: bold" class="glyphicon glyphicon-play"></span> <span ng-bind="p.title"></span></h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="section4" class="section">
+                <div class="col-xs-12 text-center section-header">
+                    <h1>Education</h1>
+                </div>
+                <div class="row" ng-repeat="e in education">
+                    <div class="col-xs-12 col-sm-5 text-right">
+                        <h2><span ng-bind="e.title"></span></h2>
+                        <h5><span ng-bind="e.time"></span> </h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <h4 style="margin-top: 28px"><span ng-bind="e.school"></span></h4>
+                    </div>
+                </div>
+            </div>
+            <div id="section5" class="section">
+                <div class="col-xs-12 text-center section-header">
+                    <h1>Screens</h1>
+                </div>
+                <div id="myGallery" class="row">
+                    <div class="col-xs-6 col-sm-3" ng-repeat="s in screens">
+                        <div class="thumbnail" style="height:120px;">
+                            <a href="{{s}}">
+                                <div style="height:100%; background-image: url({{s}}); background-size: 100% "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section6" class="section" style="min-height: 100px">
+                <div class="col-xs-12 text-center section-header">
+                    <h1>Contact</h1>
+                </div>
+                <div class="row text-center">
+                    <a href="https://www.facebook.com/gkoroshinadze" title="Facebook" class="fa fa-facebook"></a>
+                    <a href="https://www.linkedin.com/in/giorgi-koroshinadze-9a29b340/" title="LinkedIn" class="fa fa-linkedin"></a>
+                    <a href="skype:gkoroshinadze@gmail.com?call" title="Skype" class="fa fa-skype"></a>
+                    <a href="mailto:gkoroshinadze@gmail.com" title="e-Mail" class="fa fa-envelope"></a>
+                    <a href="tel:+995597590019?call" title="Phone" class="fa fa-phone"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="map" class="map" width="" height="450" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBu7qXgZEz34KOzG91RN-8-BO2GRVM-0jM
+                                    &q=tamarashvili+str.17a" allowfullscreen>
+                            </iframe>
+    <footer>
+        <div class="container"><span>&copy; 2017, Giorgi Koroshinadze</span></div>
+        <div onclick="topFunction()" id="myBtn" class="menu-up"><span class="glyphicon glyphicon-menu-up"></span></div>
+    </footer>
+    <script src="scripts/lib/jquery-1.9.1.min.js"></script>
+    <script src="scripts/lib/angular.min.js"></script>
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <script src="scripts/app/main.js"></script>
+</body>
+
+</html>

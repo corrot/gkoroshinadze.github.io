@@ -1,0 +1,287 @@
+            html,
+            body {
+                width: 100%;
+                overflow-y: auto;
+                background: #00b797;
+                color: #fff;
+            }
+            
+            html {
+                padding-top: 80px!important;
+                padding-bottom: 60px!important;
+            }
+            
+            body {
+                height: 100%;
+                position: relative;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            .navbar-default .navbar-nav>li>a,
+            .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: 16px;
+                color: #006550;
+                background: #00d6b0;
+                border-radius: 30px;
+                box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
+                margin: 5px;
+                transition: ease all .3s
+            }
+            
+            .navbar-default .navbar-nav>li>a:hover,
+            .navbar-nav>li>a:hover {
+                color: #006550;
+                background: #00d6b0;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, .7);
+            }
+            
+            .navbar-default .navbar-nav>.active>a,
+            .navbar-default .navbar-nav>.active>a:focus,
+            .navbar-default .navbar-nav>.active>a:hover {
+                color: #b8fff2;
+                background-color: #00896d!important;
+                font-size: 18px;
+                border-radius: 30px;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, .7);
+            }
+            
+            .section {
+                position: relative;
+                min-height: 400px;
+                padding: 30px 0;
+                padding-top: 80px;
+            }
+            
+            .section>.row {
+                /* position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%; */
+                margin: 20px;
+            }
+            
+            .section-header {
+                margin-bottom: 30px
+            }
+            
+            .img-circle {
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+                filter: grayscale();
+                cursor: pointer;
+                transition: ease all .3s;
+            }
+            
+            .img-circle:hover {
+                transform: scale(1.2);
+                filter: none;
+                transition: ease all .3s;
+            }
+            
+            .progress {
+                overflow: hidden;
+                cursor: pointer;
+                transition: ease all .3s;
+            }
+            
+            .progress:hover {
+                transform: scale(1.07);
+                transition: ease all .3s;
+            }
+            
+            .navbar-default {
+                background: transparent;
+                border: none;
+            }
+            
+            .progress {
+                margin-top: 25px;
+                background-color: #00896d;
+            }
+            
+            .progress-bar {
+                color: #00896d;
+                background-color: #00ffd2;
+            }
+            
+            .pin>a {
+                cursor: pointer;
+                color: #006550!important;
+            }
+            
+            .pin:hover {
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                color: #006550!important;
+            }
+            
+            h1,
+            .secondary {
+                color: #006550;
+                font-weight: bold;
+                text-shadow: none;
+            }
+            
+            h2,
+            .heading {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+                color: #b8fff2;
+            }
+            
+            h3 {
+                text-shadow: -1px 1px 3px rgba(0, 0, 0, .5);
+                color: #b8fff2;
+                font-weight: bold;
+            }
+            
+            h4 {
+                color: #006550;
+            }
+            
+            h5 {
+                color: #00896d;
+                font-weight: bold;
+            }
+            
+            a>h5 {
+                color: #004436;
+            }
+            
+            hr {
+                border-top: 1px solid #00896d;
+            }
+            
+            .thumbnail {
+                background: #006550;
+                border: none;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+                transition: ease all .3s
+            }
+            
+            .thumbnail:hover {
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .7);
+                transition: ease all .3s
+            }
+            /* @media (min-width: 768px) {
+                .container {
+                    width: 760px;
+                }
+            } */
+            
+            .fa {
+                font-size: 24px!important;
+                line-height: 20px!important;
+                padding: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                text-align: center;
+                text-decoration: none;
+                margin: 10px;
+                background: #353535;
+                opacity: 0.7;
+                transition: ease all .3s;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                box-shadow: inset 0 0 0 30px #353535;
+            }
+            
+            .fa:hover {
+                opacity: 1;
+                color: rgba(0, 0, 0, .5);
+                text-decoration: none!important;
+                transition: ease all .3s;
+                box-shadow: inset 0 0 5px 2px #353535;
+                transform: scale(1.2);
+            }
+            
+            .fa-facebook:hover {
+                background: #3B5998;
+            }
+            
+            .fa-linkedin:hover {
+                background: #007bb5;
+            }
+            
+            .fa-skype:hover {
+                background: #00aff0;
+            }
+            
+            .fa-phone {
+                background: #00c75a;
+            }
+            
+            .fa-envelope {
+                background: #ff0d0c;
+            }
+            
+            .fa-phone,
+            .fa-envelope,
+            .fa-facebook,
+            .fa-linkedin,
+            .fa-skype {
+                color: white;
+                /* text-shadow: 2px 5px 3px #282828; */
+            }
+            
+            .map {
+                border: 0;
+                width: 100%;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                transition: ease all .8s;
+            }
+            
+            .map:hover {
+                filter: none;
+                -webkit-filter: none;
+                transition: ease all .8s;
+            }
+            
+            div,
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            span {
+                font-family: 'Oswald', sans-serif;
+                /* font-family: 'Open Sans Condensed', sans-serif; */
+                /* font-family: 'Dosis', sans-serif; */
+            }
+            
+            footer {
+                position: fixed;
+                bottom: 0;
+                background: #00d6b0;
+                width: 100%;
+                padding: 22px;
+                color: rgba(0, 0, 0, .5);
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+                font-weight: bold;
+            }
+            
+            .menu-up {
+                position: fixed;
+                padding: 15px;
+                font-size: 24px;
+                z-index: 999;
+                right: 0;
+                bottom: 0;
+                font-weight: bold;
+                cursor: pointer;
+                transition: ease all .3s;
+                display: none;
+            }
+            
+            .menu-up:hover {
+                background: rgba(0, 0, 0, .3);
+                transition: ease all .3s;
+            }
